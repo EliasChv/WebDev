@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Workday Apply Manually",
+    "version": "0.1",
+    "icons": {
+        "16": "8-ball16.png",
+        "24": "8-ball24.png",
+        "128": "8-ball128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [ "<all_urls>" ],
+            "js": [ "index.js" ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_icon": {
+            "16": "8-ball16.png",
+            "24": "8-ball24.png",
+            "32": "8-ball32.png"
+        }
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [ "Elias Chavelaz Resumé.pdf" ],
+            "matches": [ "<all_urls>" ]
+        }
+    ]
+}
